@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.13.7
+    container_name: nginx
+    depends_on:
+      - flask-app
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+    ports:
+      - 80:80
+
+  flask-app:
+    image: avayaliststation
+    environment:
+      - AVAYACM=10.10.10.5
+      - AVAYAUSER=list1
+      - AVAYAPASSWD=listpass123
