@@ -1,4 +1,6 @@
+.gitignore
 .idea
+.idea/*
 venv
 templete
 *.py
