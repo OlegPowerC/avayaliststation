@@ -3,3 +3,4 @@ templete
 *.py
 *.txt
 static
+.gitignore
