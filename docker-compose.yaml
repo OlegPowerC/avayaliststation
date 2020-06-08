@@ -13,7 +13,7 @@ services:
       - 80:80
 
   flask-app:
-    image: avayaliststation
+    image: ciscoliveru/avayaliststation:latest
     environment:
       - AVAYACM=10.10.10.5
       - AVAYAUSER=list1
